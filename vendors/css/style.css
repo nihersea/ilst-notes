@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+/* Index File's Style Rules */
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.25;
+    text-align: center;
+    background-color: #18203D;
+    font-family: 'Quicksand', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+.row{
+    padding: 0 250px;
+}
+h1{
+    font-size: 40px;
+    color: #fff;
+    margin: 40px 0;
+}
+.semesters-grid-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px 0px;
+}
+.sem{
+    display: inline-block;
+    background-color: #F95959;
+    width: 230px;
+    height: 80px;
+    margin: 8px auto;
+    padding: 10px 30px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: .15s;
+}
+.sem:hover {
+    background: #f3efef;
+    color: #333;
+    border: 2px solid #F95959;
+}
+.semesters a:link,a:visited{
+    color: #fff;
+}
+
+
+
+
+
+/*5th semester page//////////////////*/
+.sem5green{
+    background: #f3efef;
+    color:#333;
+}
+.sylbtn a {
+    color: #fff;
+    background: #16be49;
+    margin: 40px 0 0 0;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: .15s;
+}
+.sylbtn a:hover {
+    background: #f3efef;
+    color: #333;
+    border: 2px solid #16be49;
+}
+
+
+
+/* Media Queries ////////////////////////////*/
+
+  /* Amazon Kindle and iPad */
+  @media screen and (max-width: 800px) {
+    .row{
+        padding: 0 100px;
+    }
+    .semesters-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .sem{
+        width: 275px;
+    }
+  }
+  /* Mobile Devices */
+  @media screen and (max-width: 415px) {
+    .row{
+        padding: 0 5px;
+    }
+    h1{
+        margin:35px 0 25px 0
+    }
+    .semesters-grid-container {
+        grid-template-columns: 1fr;
+    }
+    .sem{
+        margin: 2px auto;
+        height: 62px;
+    }
+    .sylbtn a {
+        margin: 15px auto;
+    }
+  }
