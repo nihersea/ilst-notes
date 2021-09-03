@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
-/* Index File's Style Rules */
+
+/*================================
+Index File's Style Rules
+================================*/
 *,body{
     margin: 0;
     padding: 0;
@@ -12,14 +15,17 @@
 a{
     text-decoration: none;
 }
+a:hover{
+    text-decoration: underline;
+}
 ul li{
     list-style-type: none;
 }
 .row{
-    padding: 0 250px;
+    padding: 0 200px;
 }
 h1{
-    font-size: 40px;
+    font-size: 55px;
     color: #fff;
     margin: 40px 0;
 }
@@ -49,10 +55,10 @@ h1{
 }
 
 
+/*================================
+5th semester page style rules
+================================*/
 
-
-
-/*5th semester page//////////////////*/
 .sem5green{
     background: #f3efef;
     color:#333;
@@ -73,30 +79,72 @@ h1{
     border: 2px solid #16be49;
 }
 
+footer{
+    margin-top: 250px;
+}
+footer, footer a{
+    color: #fff;
+    font-size: 12px;
+}
+/*================================
+==================================
+            MEDIA QUERIES
+==================================
+=================================*/
 
-
-/* Media Queries ////////////////////////////*/
-
-  /* Amazon Kindle and iPad */
-  @media screen and (max-width: 800px) {
+  /************************************************DESKTOP LESS THAN 1400PX*/
+@media screen and (max-width: 1399.98px) {
     .row{
-        padding: 0 100px;
+        padding: 0 110px;
+    }
+}
+  /*************************************************DESKTOP LESS THAN 1200PX */
+@media screen and (max-width: 1199.98px) {
+    .row{
+        padding: 0 20px;
+    }
+}
+  /***************************************************************TABLET*/
+@media screen and (max-width: 991.98px) {
+    .row{
+        padding: 0 25px;
+    }
+    h1{
+        font-size: 50px;
     }
     .semesters-grid-container {
-        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    footer{
+        margin-top: 150px;
+    }
+}
+  /*********************************************************LANDSCAPE PHONES */
+  @media screen and (max-width: 767.98px) {
+    .row{
+        padding: 0 10px;
+    }
+    h1{
+        font-size: 45px;
+    }
+    .semesters-grid-container {
         grid-template-columns: 1fr 1fr;
     }
     .sem{
         width: 275px;
     }
+    footer{
+        margin-top: 60px;
+    }
   }
-  /* Mobile Devices */
-  @media screen and (max-width: 415px) {
+  /***********************************************************PORTRAIT MOBILES */
+  @media screen and (max-width: 575.98px) {
     .row{
         padding: 0 5px;
     }
     h1{
-        margin:35px 0 25px 0
+        font-size: 35px;
+        margin:35px 0 25px 0;
     }
     .semesters-grid-container {
         grid-template-columns: 1fr;
@@ -108,4 +156,10 @@ h1{
     .sylbtn a {
         margin: 15px auto;
     }
+    footer{
+        margin: 25px 40px;
+    }
+    footer, footer a {
+        font-size: 10px;
+    }  
   }
